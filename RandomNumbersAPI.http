@@ -1,0 +1,6 @@
+@RandomNumbersAPI_HostAddress = http://localhost:5218
+
+GET {{RandomNumbersAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
