@@ -57,9 +57,9 @@ namespace RandomNumbers.Controllers
             {
                 case "number":
                     if (!request.Min.HasValue || !request.Max.HasValue)
-                        return BadRequest("Debe especificar 'min' y 'max' para números.");
+                        return BadRequest("Debe especificar min y max para números.");
                     if (request.Min > request.Max)
-                        return BadRequest("'min' no puede ser mayor que 'max'.");
+                        return BadRequest("min no puede ser mayor que max.");
                     return Ok(new { result = _random.Next(request.Min.Value, request.Max.Value + 1) });
 
                 case "decimal":
